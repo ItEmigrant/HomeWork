@@ -5,6 +5,8 @@ import PreJunior from './pages/PreJunior'
 import Junior from './pages/Junior'
 import JuniorPlus from './pages/JuniorPlus'
 
+
+
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
@@ -18,14 +20,14 @@ function Pages() {
             <Routes>
                {/* роутинг будут писать студенты
                 в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                <Route path={'/pre-junior'}/>
+                <Route  path={'/'} element={<Navigate to={'/pre-junior'} />}/>
 
                {/* роуты для /pre-junior, /junior, /junior-plus*/}
-                <Route path={'/pre-junior'}/>
-                <Route path={'/junior'}/>
-                <Route path={'/junior-plus'}/>
-
-         {/*       роут для несуществующей страницы должен отрисовать */}<Error404 />
+                <Route path={'/pre-junior'} element={<PreJunior />}/>
+                <Route path={'/junior'}  element={<Junior />}/>
+                <Route path={'/junior-plus'} element={<JuniorPlus />}/>
+                <Route path={'*'} element={ <Error404 />}/>
+         {/*       роут для несуществующей страницы должен отрисовать */}
                 <Route/>
             </Routes>
         </div>
