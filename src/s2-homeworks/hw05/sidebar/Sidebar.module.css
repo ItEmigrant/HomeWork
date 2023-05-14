@@ -1,13 +1,17 @@
 .sidebar {
+
 }
 
 .sidebar.open {
+
 }
 
 .background {
+
 }
 
 .nav {
+
 }
 
 .nav a {
@@ -17,9 +21,14 @@
 }
 
 .nav a.active {
+
 }
 .close {
 }
 
 .close img {
+}
+
+.active {
+    color: #e02514;
 }
