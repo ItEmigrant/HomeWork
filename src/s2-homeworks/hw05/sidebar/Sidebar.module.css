@@ -1,9 +1,18 @@
 .sidebar {
-
+    border: 2px solid;
+    flex-direction: column;
+    width: 317px;
+    height: 720px;
+    display: none;
 }
 
 .sidebar.open {
-
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    background: white;
 }
 
 .background {
@@ -11,24 +20,38 @@
 }
 
 .nav {
-
+    display: flex;
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .nav a {
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
 }
 
 .nav a:hover {
 }
 
 .nav a.active {
+    text-decoration: underline;
+    font-size: x-large;
+    color: #5781e0;
 
 }
+
 .close {
+    display: flex;
+    justify-content: end;
+    background-color: white;
+    border: none;
 }
 
 .close img {
+
 }
 
-.active {
-    color: #e02514;
-}
