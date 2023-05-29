@@ -1,14 +1,19 @@
 .select {
-
+    Width: 180px;
+    Height: 25px;
+    font-size: large;
 }
 
 .select:focus {
+
 }
 
 
 .option:hover {
+
 }
 
 select {
-    margin-top: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
