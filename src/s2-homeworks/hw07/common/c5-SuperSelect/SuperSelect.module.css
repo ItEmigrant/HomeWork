@@ -1,4 +1,5 @@
 .select {
+
 }
 
 .select:focus {
@@ -6,4 +7,8 @@
 
 
 .option:hover {
+}
+
+select {
+    margin-top: 5px;
 }
