@@ -8,8 +8,12 @@ type ActionType =
 export const homeWorkReducer = (state: Array<UserType>, action: ActionType): Array<UserType> => { // need to fix any
     switch (action.type) {
         case 'sort': { // by name
-
-            return state // need to fix
+            const newState = [...state].sort((a, b) => {
+                if (a.name > b.name) return 1
+                else if (a.name < b.name) return -1
+                else return 0
+            })
+            return action.payload === 'up' ? newState : newState.reverse() // need to fix
         }
         case 'check': {
             return state.filter(el => el.age >= action.payload)  // need to fix
@@ -19,9 +23,4 @@ export const homeWorkReducer = (state: Array<UserType>, action: ActionType): Arr
     }
 }
 
-export const CheckAC = (age: number) => {
-    return {
-        type: 'check',
-        payload: age
-    }
-}
+
