@@ -5,25 +5,23 @@ type ActionType =
     | { type: 'check'; payload: number }
 
 
-
-export const homeWorkReducer = (state:Array<UserType>, action: ActionType): Array<UserType> => { // need to fix any
+export const homeWorkReducer = (state: Array<UserType>, action: ActionType): Array<UserType> => { // need to fix any
     switch (action.type) {
         case 'sort': { // by name
 
             return state // need to fix
         }
         case 'check': {
-
-            return state // need to fix
+            return state.filter(el => el.age >= action.payload)  // need to fix
         }
         default:
             return state
     }
 }
 
-export const CheckAC = () => {
-   return {
-       type: 'check',
-
-   }
+export const CheckAC = (age: number) => {
+    return {
+        type: 'check',
+        payload: age
+    }
 }
