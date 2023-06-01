@@ -1,23 +1,55 @@
 .item {
+    margin-bottom: 4px;
+    background-color: white;
+
+
 }
 
 .item:last-of-type {
+
 }
 
 .users {
+    margin-top: 8px;
+    margin-left: 5px;
+
+
 }
 
 .buttonsContainer {
+    display: flex;
+    margin-top: 10px;
+    justify-content: right;
+
 }
 
 .container {
+    width: 606px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    border-top: 1px solid;
+
 }
 
 .thead {
+    font-weight: bolder;
+    background-color: #d8dade;
+
 }
 
 .nameCol {
+    border-bottom: 1px solid #d8dade;
 }
 
 .ageCol {
+width: 284px;
+    border-bottom: 1px solid #d8dade;
+}
+button {
+    margin-left: 4px;
+
+}
+.button{
+  border-radius: 3px;
 }

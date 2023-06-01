@@ -63,21 +63,21 @@ const HW8 = () => {
             <div className={s2.hw}>
                 <div className={s.container}>
                     <div className={s.buttonsContainer}>
-                        <SuperButton
+                        <SuperButton className={s.button}
                             id={'hw8-button-up'}
                             onClick={sortUp}
                             xType={currentSort === 'up' ? '' : 'secondary'}
                         >
                             Sort up
                         </SuperButton>
-                        <SuperButton
+                        <SuperButton className={s.button}
                             id={'hw8-button-down'}
                             onClick={sortDown}
                             xType={currentSort === 'down' ? '' : 'secondary'}
                         >
                             Sort down
                         </SuperButton>
-                        <SuperButton
+                        <SuperButton className={s.button}
                             id={'hw8-button-18'}
                             onClick={check18}
                             xType={currentSort === '18' ? '' : 'secondary'}
