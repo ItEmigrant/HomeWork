@@ -42,9 +42,9 @@ function Clock() {
 
 
     //день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = new Intl.DateTimeFormat('en', {weekday: 'long'}).format(date) || <br/> // пишут студенты
+    const stringDay = new Intl.DateTimeFormat('en-US', {weekday: 'long'}).format(date) || <br/> // пишут студенты
 
-    const stringMonth = new Intl.DateTimeFormat('en', {month: 'long'}).format(date) || <br/> // пишут студенты
+    const stringMonth = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date) || <br/> // пишут студенты
 
 
     return (
@@ -65,8 +65,8 @@ function Clock() {
                 <div className={s.more}>
                     {show ? (
                         <>
-                            <span id={'hw9-month'}>{stringDate}</span>,{' '}
-                            <span id={'hw9-date'}>{stringMonth}</span>
+                            <span id={'hw9-month'}>{stringMonth}</span>,{' '}
+                            <span id={'hw9-date'}>{stringDate}</span>
                         </>
                     ) : (
                         <>
