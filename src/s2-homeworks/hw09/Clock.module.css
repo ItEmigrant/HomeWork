@@ -1,17 +1,41 @@
 .buttonsContainer {
+    width: 180px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+
 
 }
 
 .clock {
+    margin-left: 5px;
     border-top: 1px solid;
     margin-top: 4px;
 }
 
 .watch {
+    margin-left: 5px;
     margin-top: 5px;
+
 }
 
 .watch strong {
+
 }
 
-.more {}
+.more {
+    color: #cac7c7;
+    margin-left: 5px;
+}
+
+.SB {
+    background-color: #0066cc;
+    border: #0066cc;
+    width: 90px;
+}
+
+button:disabled {
+    color: white;
+    background-color: #a6bef7;
+    border: #a6bef7;
+}
