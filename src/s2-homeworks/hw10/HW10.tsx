@@ -14,6 +14,7 @@ import {Loader} from './Loader'
 * */
 
 const HW10 = () => {
+    /*useSelector()*/
     // useSelector, useDispatch // пишет студент
     const isLoading = false
 
