@@ -1,3 +1,17 @@
-.loader {
-    /*свг и/или анимация*/
+.loader { /*свг и/или анимация*/
+    margin-left: 15px;
+    height: 80px;
+}
+
+.SB {
+    border: 1px #0066cc;
+    margin: 15px;
+    background-color: #0066cc;
+
+}
+
+.containerButton {
+    margin-top: 5px;
+    border-top: 1px solid #D9D9D9;
+
 }
