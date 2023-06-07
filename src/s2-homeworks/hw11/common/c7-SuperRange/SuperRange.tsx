@@ -4,8 +4,16 @@ import {Slider, SliderProps} from '@mui/material'
 const SuperRange: React.FC<SliderProps> = (props) => {
     return (
         <Slider
-            sx={{ // стили для слайдера // пишет студент
-                
+            sx={{
+
+        display: 'flax',
+                width: "160px",
+                margin: '7px',
+                color: 'green'
+
+
+                // стили для слайдера // пишет студент
+
             }}
             {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
         />
