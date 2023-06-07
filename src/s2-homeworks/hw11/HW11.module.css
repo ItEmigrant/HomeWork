@@ -5,6 +5,7 @@
 }
 
 .wrapper {
+    margin-top: 10px;
     display: flex;
     margin-left: 15px;
     width: 210px;
