@@ -5,8 +5,7 @@ const SuperRange: React.FC<SliderProps> = (props) => {
     return (
         <Slider
             sx={{
-
-        display: 'flax',
+                display: 'flax',
                 width: "145x",
                 marginLeft: "18px",
                 marginRight: '18px',
