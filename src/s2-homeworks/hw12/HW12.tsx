@@ -49,7 +49,7 @@ const HW12 = () => {
                         className={s.select}
                         onChangeOption={change}
                         options={themes}
-                        key={themeId}
+
 
 
 
