@@ -52,16 +52,21 @@ const HW13 = () => {
                         case 400:
                             setCode('Error 400!')
                             setImage(error400)
-                            setText(e.message)
-                            setInfo('Error 400 - usually means that most likely the front sent something wrong to the back!')
+                            setInfo(e.response.data.info)
+                            setText(e.response.data.errorText)
 
                             break
                         case 500:
+                            setCode('Error 500!')
                             setImage(error500)
+                            setInfo(e.response.data.info)
+                            setText(e.response.data.errorText)
                             break
                         default:
                             setImage(errorUnknown)
-                            setInfo('Axios Error')
+                            setCode('Error!')
+                            setText(e.message)
+                            setInfo(e.name)
                     }
                 }
                 setIsLoading(false)
