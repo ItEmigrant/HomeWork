@@ -1,23 +1,52 @@
 .buttonsContainer {
-
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 20px;
 }
 
 .responseContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .imageContainer {
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
 }
 
 .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.textContainer{
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .code {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
 }
 
 .text {
+    padding-left: 10px;
+    font-size: 22px;
+    color: black;
+    margin-top: 10px;
 }
+
 .info {
+    padding-left: 10px;
+    font-size: 14px;
+    color: grey;
+    margin-top: 5px;
 }
