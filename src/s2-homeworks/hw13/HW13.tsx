@@ -25,7 +25,7 @@ const HW13 = () => {
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
-                : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
+                : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
         setCode('')
         setImage('')
@@ -37,20 +37,24 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Code 200!')
                 setImage(success200)
-                setText(res.data.message)
-                setInfo('Request successful')
+                setText(res.data.errorText)
+                setInfo(res.data.info)
+                console.log(res.data.info)
                 setIsLoading(false)
 
                 // дописать
 
             })
             .catch((e) => {
-                setCode('Error!')
-                setText(e.message)
+
                 if (e.response) {
                     switch (e.response.status) {
                         case 400:
+                            setCode('Error 400!')
                             setImage(error400)
+                            setText(e.message)
+                            setInfo('Error 400 - usually means that most likely the front sent something wrong to the back!')
+
                             break
                         case 500:
                             setImage(error500)
