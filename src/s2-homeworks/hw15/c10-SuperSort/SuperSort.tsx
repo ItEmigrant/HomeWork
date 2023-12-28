@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaArrowDown, FaArrowUp, FaRegQuestionCircle} from "react-icons/fa";
 
 // добавить в проект иконки и импортировать
 const downIcon = '[\\/]'
@@ -13,8 +14,13 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-    // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    if (sort === '') {
+        return down;
+    } else if (sort === down) {
+        return up;
+    } else {
+        return '';
+    }
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
@@ -30,24 +36,22 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     }
 
     const icon = sort === down
-        ? downIcon
-        : sort === up
-            ? upIcon
-            : noneIcon
+        ? <FaArrowDown/> : sort === up
+            ? <FaArrowUp/>
+            : <FaRegQuestionCircle />
 
     return (
         <span
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
-            {/*сделать иконку*/}
-            {/*<img*/}
-            {/*    id={id + '-icon-' + sort}*/}
-            {/*    src={icon}*/}
-            {/*/>*/}
-
-            {icon} {/*а это убрать*/}
-        </span>
+        {sort === down
+            ? <FaArrowDown />
+            : sort === up
+                ? <FaArrowUp />
+                : <FaRegQuestionCircle />
+        }
+    </span>
     )
 }
 

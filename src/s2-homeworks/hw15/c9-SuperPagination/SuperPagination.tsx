@@ -20,7 +20,8 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
     const lastPage = 10 // пишет студент // вычислить количество страниц
 
     const onChangeCallback = (event: any, page: number) => {
-        // пишет студент
+        onChange(page, itemsCountForPage)
+
     }
 
     const onChangeSelect = (event: any) => {
@@ -29,38 +30,38 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     return (
         <div className={s.pagination}>
-        <Pagination
-            id={id + '-pagination'}
-    sx={{
-        // стили для Pagination // пишет студент
-    }}
-    page={page}
-    count={lastPage}
-    onChange={onChangeCallback}
-    hideNextButton
-    hidePrevButton
-    />
+            <Pagination
+                id={id + '-pagination'}
+                sx={{
+                    // стили для Pagination // пишет студент
+                }}
+                page={page}
+                count={lastPage}
+                onChange={onChangeCallback}
+                hideNextButton
+                hidePrevButton
+            />
 
-    <span className={s.text1}>
+            <span className={s.text1}>
         показать
         </span>
 
-        <SuperSelect
-    id={id + '-pagination-select'}
-    value={itemsCountForPage}
-    options={[
-            {id: 4, value: 4},
-    {id: 7, value: 7},
-    {id: 10, value: 10},
-]}
-    onChange={onChangeSelect}
-    />
+            <SuperSelect
+                id={id + '-pagination-select'}
+                value={itemsCountForPage}
+                options={[
+                    {id: 4, value: 4},
+                    {id: 7, value: 7},
+                    {id: 10, value: 10},
+                ]}
+                onChange={onChangeSelect}
+            />
 
-    <span className={s.text2}>
+            <span className={s.text2}>
         строк в таблице
     </span>
-    </div>
-)
+        </div>
+    )
 }
 
 export default SuperPagination
