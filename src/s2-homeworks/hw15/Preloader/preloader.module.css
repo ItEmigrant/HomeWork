@@ -1,8 +1,13 @@
 .preloader {
     position: fixed;
     z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 20%;
+}
 
+.preloaderBackground {
+    position: fixed;
+    z-index: 9998;
+    background: rgba(155, 148, 148, 0.5);
+    width: 100%;
+    height: 100%;
 }

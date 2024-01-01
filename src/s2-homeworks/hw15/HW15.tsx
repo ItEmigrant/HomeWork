@@ -7,6 +7,7 @@ import {useSearchParams} from 'react-router-dom'
 import SuperSort from "./c10-SuperSort/SuperSort";
 import SuperPagination from "./c9-SuperPagination/SuperPagination";
 import {Preloader} from "./Preloader/Preloader";
+import style from './Preloader/preloader.module.css'
 
 
 /*
@@ -101,7 +102,9 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <Preloader/>}
+                {idLoading && <div>
+                    <div className={style.preloaderBackground}></div>
+                    <Preloader/></div>}
 
                 <SuperPagination
                     page={page}
