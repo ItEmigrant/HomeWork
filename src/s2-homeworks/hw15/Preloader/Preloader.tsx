@@ -1,9 +1,9 @@
 import React from 'react';
-import s from "../../Components/Users/Users.module.css";
-import preloader from "../../Components/Users/IMG/Spin-1s-200px.svg";
+import preloader from '../Preloader/IMG/Spin-1s-200px.svg'
+import style from '../Preloader/preloader.module.css'
 
 export const Preloader = () => {
-    return <img className={s.preloader} src={preloader} alt={'fetching'}/>
+    return <img className={style.preloader} src={preloader} alt={'fetching'}/>
 
 };
 

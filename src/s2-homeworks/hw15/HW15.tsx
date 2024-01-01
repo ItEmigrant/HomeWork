@@ -6,6 +6,7 @@ import axios from 'axios'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from "./c10-SuperSort/SuperSort";
 import SuperPagination from "./c9-SuperPagination/SuperPagination";
+import {Preloader} from "./Preloader/Preloader";
 
 
 /*
@@ -100,7 +101,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <Preloader/>}
 
                 <SuperPagination
                     page={page}
