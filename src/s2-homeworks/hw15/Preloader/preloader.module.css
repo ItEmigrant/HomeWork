@@ -1,11 +1,11 @@
 .preloader {
-    position: fixed;
+    position: absolute;
     z-index: 9999;
-    margin-left: 20%;
+    left: 20%;
 }
 
 .preloaderBackground {
-    position: fixed;
+    position: absolute;
     z-index: 9998;
     background: rgba(155, 148, 148, 0.5);
     width: 100%;
